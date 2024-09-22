@@ -38,6 +38,7 @@
                 </ul>
             </div>
         </nav>
+        <hr>
     </header>
 
     <!-- Conte[udo -->
@@ -91,7 +92,7 @@
                                     <option>Salto</option>
                                     <option>Sorocaba</option>
                                     <option>Sumaré</option>
-                                    <option>Tatuí</option>                                       
+                                    <option>Tatuí</option>
                                     <option>Tietê</option>
                                 </select>
                             </div>
@@ -114,7 +115,7 @@
                                     <option>Salto</option>
                                     <option>Sorocaba</option>
                                     <option>Sumaré</option>
-                                    <option>Tatuí</option>                                       
+                                    <option>Tatuí</option>
                                     <option>Tietê</option>
                                 </select>
                             </div>
@@ -171,9 +172,36 @@
 
             <!-- Atividade 3 -->
             <section class="tab-pane fade" id="atividade-3" role="tabpanel" tabindex="0">
-                <div class="container mt-2 mb-2">
-                    <h4 class="text-center mb-3">Exercício</h4>
-                    <p> ... </p>
+                <!-- Navegação entre os exercícios -->
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="cliente-alucinada-tab" data-bs-toggle="pill"
+                            data-bs-target="#cliente-alucinada" type="button" role="tab" aria-controls="cliente-alucinada"
+                            aria-selected="true">Cliente alucinada</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="cia-optica-tab" data-bs-toggle="pill"
+                            data-bs-target="#cia-optica" type="button" role="tab" aria-controls="cia-optica"
+                            aria-selected="false">Cia. Ótica Gallão</button>
+                    </li>
+                </ul>
+                
+                <!-- Conteúdo dos exercícios -->
+                <section class="tab-content container mb-2" id="pills-tabContent">                    
+                    <section class="tab-pane fade show active" id="cliente-alucinada" role="tabpanel"
+                        aria-labelledby="cliente-alucinada-tab" tabindex="0">
+                        <div class="container mt-4 mb-2">
+                            <p>
+                                A figura abaixo mostra o mapa de ruas de uma determinada cidade. Uma loja situada na Av. Girafa
+                                está liquidando seu estoque. Uma cliente alucinada por descontos está no ponto P1 e irá para esta loja
+                                aproveitar os bons preços. Considere este problema como um grafo G = (V,E) a partir do mapa de ruas
+                                abaixo, sendo cada esquina um vértice e cada rua uma aresta ponderada e orientada:
+                            </p>
+                        </div>
+                    </section>
+                    <section class="tab-pane fade" id="cia-optica" role="tabpanel"
+                        aria-labelledby="cia-optica-tab" tabindex="0">...</section>
+                </section>
             </section>
         </section>
     </main>
