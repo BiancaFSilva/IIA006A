@@ -51,7 +51,7 @@
     <!-- Conte[udo -->
     <main class="d-flex align-items-start mt-4">
         <!-- Menu -->
-        <section class="nav flex-column nav-pills me-3 col-2" id="menuTabVertical" role="tablist"
+        <section class="nav flex-column nav-pills me-3 col-2 mt-4" id="menuTabVertical" role="tablist"
             aria-orientation="vertical">
             <!-- Atividade 2: mapa rodoviário -->
             <button class="nav-link active" id="atividade-2-tab" data-bs-toggle="pill" data-bs-target="#atividade-2"
@@ -68,11 +68,11 @@
         </section>
 
         <!-- Conteúdo -->
-        <section class="tab-content" id="conteudoMenuTabVertical">
+        <section class="tab-content mt-4" id="conteudoMenuTabVertical">
             <!-- Atividade 2 -->
             <section class="tab-pane fade show active" id="atividade-2" role="tabpanel" tabindex="0">
                 <div class="container mt-2 mb-2">
-                    <h4 class="text-center mb-3">Mapa Rodoviário</h4>
+                    <h4 class="text-center mb-4">Mapa Rodoviário</h4>
                     <p>
                         Bem-vindo(a) ao Mapa Rodoviário do Interior de São Paulo, nosso objetivo é identificar o menor
                         trajeto
@@ -167,10 +167,10 @@
                             </p>
 
                             <!-- Caminho identificado pelo algoritmo -->
-                            <span id="caminhoIdentificado">-</span>
+                            <span id="caminhoIdentificado"></span>
 
                             <!-- Distância percorrida entre origem e destino -->
-                            <p> A distância total percorrida é de <strong id="distanciaPercorrida">89 km</strong>. </p>
+                            <p> A distância total a ser percorrida é de <strong id="distanciaPercorrida"></strong>. </p>
                         </div>
 
                         <!-- Representação do grafo -->

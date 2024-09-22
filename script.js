@@ -1,5 +1,5 @@
-import { startBFS } from './src/algoritmoBFS.js';
-import { startDFS } from './src/algoritmoDFS.js';
+import { algoritmoBFS } from './src/algoritmoBFS.js';
+import { algoritmoDFS } from './src/algoritmoDFS.js';
 
 document.getElementById('iniciaBusca').addEventListener('click', function () {
     let origem = document.getElementById('identificaOrigem').value;
@@ -12,8 +12,8 @@ document.getElementById('iniciaBusca').addEventListener('click', function () {
 
     // Executar o algoritmo de busca
     if (algoritmo === 'BFS') {
-        startBFS(origem, destino);
+        algoritmoBFS(origem, destino);
     } else if (algoritmo === 'DFS') {
-        startDFS(origem, destino);
+        algoritmoDFS(origem, destino);
     }
 });
