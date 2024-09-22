@@ -22,7 +22,7 @@
     <link href="https://unpkg.com/vis-network@9.0.4/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="container mt-4 bg-dark">
+<body class="container mt-4 bg-dark text-light">
     <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -40,14 +40,6 @@
         </nav>
     </header>
 
-    <div class="mt-4 mb-4">
-        <h1 class="text-center"></h1>
-        <p class="mt-4">
-            Implementação prática das atividades desenvolvidas para reforçar o entendimento dos diferentes
-            <strong>algortimos de busca</strong> abordados na disciplina.
-        </p>
-    </div>
-
     <!-- Conte[udo -->
     <main class="d-flex align-items-start mt-4">
         <!-- Menu -->
@@ -60,11 +52,6 @@
             <!-- Atividade 3 -->
             <button class="nav-link" id="atividade-3-tab" data-bs-toggle="pill" data-bs-target="#atividade-3"
                 type="button" role="tab" aria-controls="atividade-3" aria-selected="false" disabled>Atividade 3</button>
-
-            <!-- Atividade 4 -->
-            <button class="nav-link" id="atividade-4-tab" data-bs-toggle="pill" data-bs-target="#atividade-4"
-                type="button" role="tab" aria-controls="atividade-4" aria-selected="false" disabled hidden>Atividade
-                4</button>
         </section>
 
         <!-- Conteúdo -->
@@ -175,7 +162,8 @@
 
                         <!-- Representação do grafo -->
                         <div class="col-6">
-                            <div id="grafoPonderadoNaoOrientado" style="width: 600px; height: 400px;"></div>
+                            <div id="grafoPonderadoNaoOrientado" style="width: 600px; height: 400px;" hidden></div>
+                            <div id="grafoPonderadoNaoOrientadoDFS" style="width: 600px; height: 400px;" hidden></div>
                         </div>
                     </div>
                 </div>
@@ -187,10 +175,6 @@
                     <h4 class="text-center mb-3">Exercício</h4>
                     <p> ... </p>
             </section>
-
-            <!-- Atividade 4-->
-            <section class="tab-pane fade" id="atividade-4" role="tabpanel" aria-labelledby="atividade-4-tab"
-                tabindex="0">...</section>
         </section>
     </main>
 

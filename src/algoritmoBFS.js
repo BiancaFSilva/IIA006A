@@ -56,7 +56,8 @@ var opcoesExibicao = {
         shape: 'square',
         size: 10,
         font: {
-            size: 14
+            size: 14,
+            color: 'white'
         }
     },
     physics: {

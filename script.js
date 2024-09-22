@@ -12,8 +12,14 @@ document.getElementById('iniciaBusca').addEventListener('click', function () {
 
     // Executar o algoritmo de busca
     if (algoritmo === 'BFS') {
+        document.getElementById('grafoPonderadoNaoOrientado').removeAttribute('hidden');
+        document.getElementById('grafoPonderadoNaoOrientadoDFS').setAttribute('hidden', true);
+
         algoritmoBFS(origem, destino);
     } else if (algoritmo === 'DFS') {
+        document.getElementById('grafoPonderadoNaoOrientadoDFS').removeAttribute('hidden');
+        document.getElementById('grafoPonderadoNaoOrientado').setAttribute('hidden', true);
+
         algoritmoDFS(origem, destino);
     }
 });

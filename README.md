@@ -1,2 +1,2 @@
 # Inteligência Artificial
- Implementação prática para complementar as atividades da disciplina de Inteligência Artificial.
+ Implementação prática para complementar as atividades desenvolvidas para reforçar o entendimento dos diferentes **algortimos de busca** abordados na disciplina de Inteligência Artificial.
