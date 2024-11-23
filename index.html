@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Algoritmos de busca -->
     <script src="./src/algoritmoBFS.js"></script>
@@ -41,7 +42,7 @@
         <hr>
     </header>
 
-    <!-- Conte[udo -->
+    <!-- Conteúdo -->
     <main class="d-flex align-items-start mt-4">
         <!-- Menu -->
         <section class="nav flex-column nav-pills me-3 col-2 mt-4" id="menuTabVertical" role="tablist"
@@ -52,7 +53,11 @@
 
             <!-- Atividade 3 -->
             <button class="nav-link" id="atividade-3-tab" data-bs-toggle="pill" data-bs-target="#atividade-3"
-                type="button" role="tab" aria-controls="atividade-3" aria-selected="false" disabled>Atividade 3</button>
+                type="button" role="tab" aria-controls="atividade-3" aria-selected="false" hidden>Atividade 3</button>
+
+            <!-- Atividade 6 -->
+            <button class="nav-link" id="atividade-6-tab" data-bs-toggle="pill" data-bs-target="#atividade-6"
+                type="button" role="tab" aria-controls="atividade-6" aria-selected="false" hidden>Atividade 6</button>
         </section>
 
         <!-- Conteúdo -->
@@ -176,32 +181,336 @@
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="cliente-alucinada-tab" data-bs-toggle="pill"
-                            data-bs-target="#cliente-alucinada" type="button" role="tab" aria-controls="cliente-alucinada"
-                            aria-selected="true">Cliente alucinada</button>
+                            data-bs-target="#cliente-alucinada" type="button" role="tab"
+                            aria-controls="cliente-alucinada" aria-selected="true">Cliente alucinada</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="cia-optica-tab" data-bs-toggle="pill"
-                            data-bs-target="#cia-optica" type="button" role="tab" aria-controls="cia-optica"
-                            aria-selected="false">Cia. Ótica Gallão</button>
+                        <button class="nav-link" id="cia-optica-tab" data-bs-toggle="pill" data-bs-target="#cia-optica"
+                            type="button" role="tab" aria-controls="cia-optica" aria-selected="false">Cia. Ótica
+                            Gallão</button>
                     </li>
                 </ul>
-                
+
                 <!-- Conteúdo dos exercícios -->
-                <section class="tab-content container mb-2" id="pills-tabContent">                    
+                <section class="tab-content container mb-2" id="pills-tabContent">
                     <section class="tab-pane fade show active" id="cliente-alucinada" role="tabpanel"
                         aria-labelledby="cliente-alucinada-tab" tabindex="0">
                         <div class="container mt-4 mb-2">
                             <p>
-                                A figura abaixo mostra o mapa de ruas de uma determinada cidade. Uma loja situada na Av. Girafa
-                                está liquidando seu estoque. Uma cliente alucinada por descontos está no ponto P1 e irá para esta loja
-                                aproveitar os bons preços. Considere este problema como um grafo G = (V,E) a partir do mapa de ruas
+                                A figura abaixo mostra o mapa de ruas de uma determinada cidade. Uma loja situada na Av.
+                                Girafa
+                                está liquidando seu estoque. Uma cliente alucinada por descontos está no ponto P1 e irá
+                                para esta loja
+                                aproveitar os bons preços. Considere este problema como um grafo G = (V,E) a partir do
+                                mapa de ruas
                                 abaixo, sendo cada esquina um vértice e cada rua uma aresta ponderada e orientada:
                             </p>
                         </div>
                     </section>
-                    <section class="tab-pane fade" id="cia-optica" role="tabpanel"
-                        aria-labelledby="cia-optica-tab" tabindex="0">...</section>
+                    <section class="tab-pane fade" id="cia-optica" role="tabpanel" aria-labelledby="cia-optica-tab"
+                        tabindex="0">...</section>
                 </section>
+            </section>
+
+            <!-- Atividade 6 -->
+            <section class="tab-pane fade" id="atividade-6" role="tabpanel" tabindex="0">
+                <div class="container mt-2 mb-2">
+                    <h4 class="text-center mb-4">Rede Neural Artificial</h4>
+                    <p>
+                        Este é a simulação de uma rede neural artificial do tipo Perceptron supervisionada, iremos
+                        treiná-la com base
+                        nas entradas (&#120013;<sub>n</sub>), saída esperada (<i>d</i>) e taxa de aprendizado (&#951;)
+                        que você informar.
+                    </p>
+                </div>
+
+                <!-- Form para identificação das entradas e da saída esperada] -->
+                <form class="mt-4 mb-4">
+
+                    <div class="row align-items-center" id="trainingInputs">
+                        <div class="col-3"></div>
+                        <div class="col-9 hstack gap-3">
+                            <!-- X1 -->
+                            <div class="form-floating col-1 mb-3">
+                                <input type="number" class="form-control" id="identificaX1" placeholder="x1" required>
+                                <label for="identificaX1">&#120013;<sub>1</sub></label>
+                            </div>
+                            <!-- X2 -->
+                            <div class="form-floating col-1 mb-3">
+                                <input type="number" class="form-control" id="identificaX2" placeholder="x2" required>
+                                <label for="identificaX2">&#120013;<sub>2</sub></label>
+                            </div>
+                            <!-- X3 -->
+                            <div class="form-floating col-1 mb-3">
+                                <input type="number" class="form-control" id="identificaX3" placeholder="x3" required>
+                                <label for="identificaX3">&#120013;<sub>3</sub></label>
+                            </div>
+                            <!-- Resultado esperado (Yx) -->
+                            <div class="form-floating col-1 mb-3">
+                                <input id="resultadoEsperado" class="form-control" placeholder="valor esperado"
+                                    type="number" required>
+                                <label for="resultadoEsperado"><i>d</i><sub>&#120013;</sub></label>
+                            </div>
+
+                            <div class="col-1"></div>
+                            
+                            <!-- Botão para adição dos dados de treinamento -->
+                            <div class="col-auto mb-3">
+                                <button type="button" class="btn btn-success" id="adicionarEntrada"> <i class="bi bi-plus-circle"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-3"></div>
+                        <div class="col hstack gap-3">
+                            <!-- Taxa de aprendizado -->
+                            <div class="form-floating col-2 mb-3">
+                                <input id="taxaDeAprendizado" class="form-control" placeholder="taxa de aprendizado"
+                                    type="number" step="0.01" required>
+                                <label for="taxaDeAprendizado">&#951;</label>
+                            </div>
+
+                            <!-- Bias -->
+                            <div class="form-check col-3 mb-3">
+                                <input type="checkbox" class="form-check-input" id="bias">
+                                <label for="bias" class="form-check-label"><i>Bias</i></label>
+                            </div>
+
+                            <!-- Botão para iniciar o treinamento -->
+                            <div class="col-2 mb-3">
+                                <button id="treinarRede" type="button" class="btn btn-primary">Treinar RNA</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Tabela de treinamento -->
+                <div class="container mt-4 mb-4">
+                    <h6 class="mb-3">Treinamento</h6>
+
+                    <table class="table table-sm table-dark table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">&#120013;<sub>1</sub></th>
+                                <th scope="col">&#120013;<sub>2</sub></th>
+                                <th scope="col">&#120013;<sub>3</sub></th>
+                                <th scope="col"><i>Bias</i></th>
+                                <th scope="col">&#120012;<sub>1</sub></th>
+                                <th scope="col">&#120012;<sub>2</sub></th>
+                                <th scope="col">&#120012;<sub>3</sub></th>
+                                <th scope="col">&#120012;<i>Bias</i></th>
+                                <th scope="col"><i>d</i></th>
+                                <th scope="col">&#402;<sub>net</sub></th>
+                                <th scope="col">&#120013;</th>
+                                <th scope="col">&#948;</th>
+
+                                <th scope="col">&#916;&#120012;<sub>1</sub></th>
+                                <th scope="col">&#916;&#120012;<sub>2</sub></th>
+                                <th scope="col">&#916;&#120012;<sub>3</sub></th>
+                                <th scope="col">&#916;&#120012;<i>Bias</i></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th id="iteracao" scope="row"></th>
+                                <td id="entradaX1"></td>
+                                <td id="entradaX2"></td>
+                                <td id="entradaX3"></td>
+                                <td id="entradaBias"></td>
+                                <td id="entradaW1"></td>
+                                <td id="entradaW2"></td>
+                                <td id="entradaW3"></td>
+                                <td id="entradaWBias"></td>
+                                <td id="entradaResultadoEsperado"></td>
+                                <td id="funcaoNet"></td>
+                                <td id="saida"></td>
+                                <td id="diferenca"></td>
+
+                                <td id="deltaW1"></td>
+                                <td id="deltaW2"></td>
+                                <td id="deltaW3"></td>
+                                <td id="deltaWBias"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Resultado da busca -->
+                <div id="resultadoBusca" class="container mt-4 mb-4">
+                    <h5 class="mb-3">Resultado</h5>
+
+                    <p>O treinamento foi concluído com <spam id="totalDeIteracoes"></spam> iterações.</p>
+                </div>
+
+                <!-- Cálculos para preenchimento da tabela -->
+                <script>
+                    // Preenche a primeira linha da tabela com os dados informados e inicia o treinamento
+                    document.getElementById("treinarRede").addEventListener('click', () => {
+                        let x1 = document.getElementById("identificaX1").value;
+                        let x2 = document.getElementById("identificaX2").value;
+                        let x3 = document.getElementById("identificaX3").value;
+                        let resultadoEsperado = document.getElementById("resultadoEsperado").value;
+                        let taxaDeAprendizado = document.getElementById("taxaDeAprendizado").value;
+                        let taxaDeErro = 0.1;
+                        let bias = 0;
+                        if (document.getElementById("bias").checked) { bias = 1; }
+
+                        document.getElementById("iteracao").textContent = "1ª";
+                        document.getElementById("entradaX1").textContent = x1;
+                        document.getElementById("entradaX2").textContent = x2;
+                        document.getElementById("entradaX3").textContent = x3;
+                        document.getElementById("entradaBias").textContent = bias;
+                        document.getElementById("entradaW1").textContent = taxaDeErro;
+                        document.getElementById("entradaW2").textContent = taxaDeErro;
+                        document.getElementById("entradaW3").textContent = taxaDeErro;
+                        document.getElementById("entradaWBias").textContent = taxaDeErro;
+                        document.getElementById("entradaResultadoEsperado").textContent = resultadoEsperado;
+                    });
+                </script>
+
+
+                <script>
+                    class Perceptron {
+                        constructor(taxaDeAprendizado, useBias) {
+                            this.weights = [0, 0, 0];
+                            this.bias = useBias ? 0 : null;
+                            this.taxaDeAprendizado = taxaDeAprendizado;
+                        }
+
+                        predict(inputs) {
+                            let sum = inputs.reduce((acc, val, idx) => acc + val * this.weights[idx], 0);
+                            if (this.bias !== null) sum += this.bias;
+                            return sum >= 0 ? 1 : 0;
+                        }
+
+                        train(data) {
+                            let iterations = 0;
+                            let errorExists;
+                            do {
+                                errorExists = false;
+                                data.forEach(({ inputs, expected }) => {
+                                    const prediction = this.predict(inputs);
+                                    const error = expected - prediction;
+
+                                    if (error !== 0) {
+                                        errorExists = true;
+                                        inputs.forEach((input, idx) => {
+                                            this.weights[idx] += this.taxaDeAprendizado * error * input;
+                                        });
+                                        if (this.bias !== null) {
+                                            this.bias += this.taxaDeAprendizado * error;
+                                        }
+                                    }
+                                });
+                                iterations++;
+                            } while (errorExists && iterations < 1000); // Limite para evitar loops infinitos
+                            return iterations;
+                        }
+                    }
+
+                    let perceptron;
+
+                    // Adicionar nova linha de entrada
+                    document.getElementById("adicionarEntrada").addEventListener("click", () => {
+                        const newRow = document.createElement("div");
+                        newRow.classList.add("input-group", "mb-3");
+                        newRow.innerHTML = `
+                        <div class="row align-items-center" id="trainingInputs">
+                            <div class="col-3"></div>
+                            <div class="col-9 hstack gap-3">
+                                <!-- X1 -->
+                                <div class="form-floating col-1 mb-3">
+                                    <input type="number" class="form-control" placeholder="x1" required>
+                                    <label for="identificaX1">&#120013;<sub>1</sub></label>
+                                </div>
+                                <!-- X2 -->
+                                <div class="form-floating col-1 mb-3">
+                                    <input type="number" class="form-control" placeholder="x2" required>
+                                    <label for="identificaX2">&#120013;<sub>2</sub></label>
+                                </div>
+                                <!-- X3 -->
+                                <div class="form-floating col-1 mb-3">
+                                    <input type="number" class="form-control" placeholder="x3" required>
+                                    <label for="identificaX3">&#120013;<sub>3</sub></label>
+                                </div>
+                                <!-- Resultado esperado (Yx) -->
+                                <div class="form-floating col-1 mb-3">
+                                    <input class="form-control" placeholder="valor esperado" type="number" required>
+                                    <label for="resultadoEsperado"><i>d</i><sub>&#120013;</sub></label>
+                                </div>
+
+                                <div class="col-2"></div>
+
+                                <!-- Botão para remoção dos dados de treinamento -->                                
+                                <button type="button" class="col-auto btn btn-danger mb-3 removerEntrada"> <i class="bi bi-dash-circle"></i> </button>                                
+                            </div>
+                        </div>                            
+                        `;
+                        document.getElementById("trainingInputs").appendChild(newRow);
+                    });
+
+                    // Remover linha de entrada
+                    document.getElementById("trainingInputs").addEventListener("click", (e) => {
+                        if (e.target.classList.contains("removerEntrada")) {
+                            e.target.parentElement.remove();
+                        }
+                    });
+
+                    // Treinar a rede
+                    document.getElementById("trainButton").addEventListener("click", () => {
+                        const inputs = document.querySelectorAll("#trainingInputs .form-floating");
+                        const trainingData = [];
+
+                        inputs.forEach((row) => {
+                            const [x1, x2, x3, yx] = Array.from(row.querySelectorAll("input")).map((input) =>
+                                parseFloat(input.value)
+                            );
+
+                            trainingData.push({ inputs: [x1, x2, x3], expected: yx });
+                        });
+
+                        const taxaDeAprendizado = parseFloat(document.getElementById("taxaDeAprendizado").value);
+                        const useBias = document.getElementById("bias").checked;
+
+                        if (!trainingData.length || isNaN(taxaDeAprendizado)) {
+                            alert("Preencha todos os campos corretamente.");
+                            return;
+                        }
+
+                        perceptron = new Perceptron(taxaDeAprendizado, useBias);
+                        const iterations = perceptron.train(trainingData);
+
+                        let resultsHTML = `<p>Treinamento concluído em <strong>${iterations}</strong> iterações.</p>`;
+                        resultsHTML += `<p>Pesos finais: <strong>${perceptron.weights.join(", ")}</strong></p>`;
+                        if (useBias) resultsHTML += `<p>Bias final: <strong>${perceptron.bias}</strong></p>`;
+                        document.getElementById("totalDeIteracoes").innerHTML = resultsHTML;
+                    });
+
+                    // Testar nova entrada
+                    document.getElementById("testButton").addEventListener("click", () => {
+                        if (!perceptron) {
+                            alert("Treine a rede antes de realizar testes.");
+                            return;
+                        }
+
+                        const inputs = [
+                            parseFloat(document.getElementById("testInput1").value),
+                            parseFloat(document.getElementById("testInput2").value),
+                            parseFloat(document.getElementById("testInput3").value),
+                        ];
+
+                        if (inputs.some(isNaN)) {
+                            alert("Preencha todos os valores de entrada para o teste.");
+                            return;
+                        }
+
+                        const prediction = perceptron.predict(inputs);
+                        document.getElementById("testResult").innerHTML = `<p>Resultado da predição: <strong>${prediction}</strong></p>`;
+                    });
+                </script>
+
             </section>
         </section>
     </main>
